@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="col-md-12">
+	{{ Form::open(array('route' => 'posts.store'))}}
 	
 	<div class="control-group">
 		
