@@ -3,7 +3,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tutsbyus</title>
+    <title>The Blog</title>
 
     <!-- Bootstrap core CSS -->
     {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css') }}

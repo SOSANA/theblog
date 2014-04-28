@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          {{ HTML::link('/', 'Tutsbyus', array('class' => 'navbar-brand')) }}
+          {{ HTML::link('/', 'The Blog', array('class' => 'navbar-brand')) }}
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
