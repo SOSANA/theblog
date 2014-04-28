@@ -25,4 +25,5 @@ Route::group(array('before' => 'auth'), function(){
 
 	Route::get('admin', 'AdminController@index');
 	Route::get('logout', 'AuthController@logout');
+	Route::resource('posts', 'PostController');
 });

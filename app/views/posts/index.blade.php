@@ -39,7 +39,7 @@
 		</table>
 	</div>
 @else
-	{{-- false expr --}}
+<div class="alert alert-info col-md-4" style="margin-top:15px">You currently have no posts</div>
 @endif
 
 @stop
