@@ -22,6 +22,7 @@ Route::get('register', 'AuthController@getRegister');
 Route::post('register', 'AuthController@postRegister');
 Route::get('login', 'AuthController@getLogin');
 Route::post('login', 'AuthController@postLogin');
+Route::post('search', 'HomeController@search');
 
 Route::get('blog/{slug}', function($slug){
 	

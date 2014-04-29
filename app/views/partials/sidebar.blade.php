@@ -1,13 +1,13 @@
         <div class="col-lg-4">
           <div class="well">
             <h4>Blog Search</h4>
-            
+            {{ Form::open(array('url' => 'search')) }}
             <div class="input-group">
-              
-              <span class="input-group-btn">
-              
+              {{Form::text('search', '', array('class' => 'form-control'))}}
+              <span class="input-group-btn" style="margin-right:10px;">
+              {{ Form::submit('Search', array('class' => 'btn btn-default'))}}
               </span>
-            
+            {{ Form::close()}}
             </div><!-- /input-group -->
           </div><!-- /well -->
           <div class="well">
