@@ -35,23 +35,20 @@ class PostController extends AdminController {
 		$v = Validator::make($input, Post::$rules);
 
 		if ($v->passes()) {
-
+			
 			$post = new Post;
-			$post->title   = Input::get('title');
-			$post->body    = Input::get('body');
-			$post->m_keyw  = Input::get('m_keyw');
-			$post->m_desc  = Input::get('m_desc');
-			$post->slug    = Str::slug(Input::get('title'));
+			$post->title = Input::get('title');
+			$post->body = Input::get('body');
+			$post->m_keyw = Input::get('m_keyw');
+			$post->m_desc = Input::get('m_desc');
+			$post->slug = Str::slug(Input::get('title'));
 			$post->user_id = Auth::user()->id;
 			$post->save();
 
 			return Redirect::route('posts.index');
-
 		}
 
-		//return Redirect::route('posts.create')->withErrors($v);
 		return Redirect::back()->withErrors($v);
-		
 	}
 
 	/**
@@ -67,7 +64,7 @@ class PostController extends AdminController {
 		$date = $post->created_at;
 		setlocale(LC_TIME, 'America/New_York');
 		$date = $date->formatlocalized('%A %d %B %Y');
-        
+
         return View::make('posts.show')->with('post', $post)->with('date', $date);
 	}
 
@@ -80,11 +77,11 @@ class PostController extends AdminController {
 	public function edit($id)
 	{
 		$post = Post::find($id);
-		
-		if (is_null($post)) 
+
+		if(is_null($post))
 		{
 			return Redirect::route('posts.index');
-		} 
+		}
 
         return View::make('posts.edit')->with('post', $post);
 	}
@@ -101,7 +98,7 @@ class PostController extends AdminController {
 
 		$v = Validator::make($input, Post::$rules);
 
-		if ($v->passes()) 
+		if($v->passes())
 		{
 			Post::find($id)->update($input);
 			return Redirect::route('posts.index');

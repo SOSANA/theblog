@@ -11,6 +11,6 @@
 	<p>{{ Str::limit($p->body, 120) }} {{ HTML::link('blog/'.$p->slug, 'Read more'); }}</p>
 </div>
 @endforeach
-
+<div class="col-lg-8">{{ $posts->links() }}</div>
 
 @stop

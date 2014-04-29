@@ -25,7 +25,7 @@ Route::post('login', 'AuthController@postLogin');
 Route::post('search', 'HomeController@search');
 
 Route::get('blog/{slug}', function($slug){
-	
+
 	$post = Post::where('slug', $slug)->first();
 
 	$date = $post->created_at;
@@ -33,12 +33,13 @@ Route::get('blog/{slug}', function($slug){
 	$date = $date->formatlocalized('%A %d %B %Y');
 
 	return View::make('site.post')->with('post', $post)->with('date', $date);
-
 });
+
 
 Route::group(array('before' => 'auth'), function(){
 
 	Route::get('admin', 'AdminController@index');
 	Route::get('logout', 'AuthController@logout');
-	Route::resource('posts', 'PostController');
+	Route::resource('posts', "PostController");
+
 });
