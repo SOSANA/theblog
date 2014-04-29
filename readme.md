@@ -1,7 +1,7 @@
 ## The Blog
 
-This is a work in progress project building a blog web app using laravel 4 and Bootstrap 3 creating model's, controllers, views and restful routes !
+#This was created to test the foundation for a basic blog web app using laravel 4 and Bootstrap 3!
 
-Current Build Versions
-Laravel Framework version 4.1.28
-Bootstrap 3.0.2
+#Current Build Versions:
+#Laravel Framework version 4.1.28
+#Bootstrap 3.0.2

@@ -17,8 +17,6 @@
         
       @include('partials/sidebar')
       
-      {{ $posts->links() }}
-
       @include('partials/footer')
 
     @include('partials/scripts')
